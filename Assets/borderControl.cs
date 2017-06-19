@@ -15,7 +15,8 @@ public class borderControl : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		Debug.Log ("destroy");
-		Destroy (other.gameObject);
+		Debug.Log("destroy");
+		Destroy(other.gameObject);
 	}
+
 }

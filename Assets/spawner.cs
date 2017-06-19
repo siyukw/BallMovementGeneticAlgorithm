@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour {
 	public GameObject ball;
+	public GameObject fakeBall;
 	public float waitingForNextSpawn = 1;
 	public float Countdown = 1;
 	public float xMin;
@@ -26,7 +27,7 @@ public class spawner : MonoBehaviour {
 	void Spawn () {
 		// Instantiate a random enemy.
 		Vector3 pos = new Vector3 (Random.Range (xMin, xMax), Random.Range (yMin, yMax), 0.0f);
-		Instantiate (ball, pos, Quaternion.identity);
+		fakeBall = Instantiate (ball, pos, Quaternion.identity);
 	}
 
 }
