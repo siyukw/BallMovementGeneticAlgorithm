@@ -9,12 +9,15 @@ public class ballScript : MonoBehaviour {
 	// Use this for initialization
 	// initializes speed and direction for each ball
 	void Start () {
-		ballSpeed = Random.Range (0.0f, 4.0f);
+		ballSpeed = Random.Range (1.0f, 4.0f);
 		direction = Random.insideUnitCircle.normalized;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		transform.Translate (direction * ballSpeed * Time.deltaTime);
+	}
+	void OnBecameInvisible() {
+		Destroy(gameObject);
 	}
 }
