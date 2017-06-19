@@ -17,7 +17,8 @@ public class ballScript : MonoBehaviour {
 	void Update () {
 		transform.Translate (direction * ballSpeed * Time.deltaTime);
 	}
-	void OnBecameInvisible() {
-		Destroy(gameObject);
-	}
+
+
+
+
 }
